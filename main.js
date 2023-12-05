@@ -12,6 +12,7 @@ const idImageInput = document.getElementById("idProfileImage");
 const studentFrom = document.getElementById("studentFrom");
 const resetButton = document.getElementById("resetButton");
 
+
 //output elements
 const nameOutput =document.getElementById("id_name");
 const fatherNameOutput =document.getElementById("id_father_name");
@@ -21,8 +22,12 @@ const bloodGroupOutput = document.getElementById("id_bloodGroup");
 const addressOutput = document.getElementById("id_address");
 const phoneNumberOutput = document.getElementById("id_contact");
 const studentIdImage = document.getElementById("student_image");
+const studentIdNo = document.getElementById("uniqId");
+
 let imgOutput;
 let imageURL;
+
+// file type input function 
 idImageInput.addEventListener("input", () => {
     console.log("File input changed");
     if (idImageInput.files.length) {
@@ -35,9 +40,19 @@ idImageInput.addEventListener("input", () => {
         console.log("No file selected");
     }
 });
-console.log()
+//rendom number for student uniq id
+let randomNumber ;
+
+function getRndInteger(min, max) {
+  randomNumber = Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+  getRndInteger(100123, 100999)
+
+//function for form handling
 const formHandler = (event) => {
+   
     event.preventDefault();
+    studentIdNo.textContent = randomNumber;
     nameOutput.textContent = nameInput.value;
     fatherNameOutput.textContent = fatherNameInput.value;
     classNameOutput.textContent = classNameInput.value;
@@ -45,15 +60,15 @@ const formHandler = (event) => {
     bloodGroupOutput.textContent = bloodGroupInput.value;
     addressOutput.textContent = addressInput.value;
     phoneNumberOutput.textContent = phoneNumberInput.value;
-    // Save the image URL for later use
+  
     // Set the temporary URL as the src attribute
     studentIdImage.src = imageURL;
     imgOutput = imageURL;
 
-
 }
 const clearData = () => {
     studentIdImage.src = "img/student.png"
+    studentIdNo.textContent = "";
     nameOutput.textContent = "";
     fatherNameOutput.textContent = "";
     classNameOutput.textContent = "";
@@ -66,3 +81,15 @@ const clearData = () => {
 studentFrom.addEventListener("submit", formHandler);
 resetButton.addEventListener("click", clearData)
 
+
+const downloadButton = document.getElementById('downloadButton');
+function generatePDF() {
+    // Choose the element that our invoice is rendered in.
+    const idCard = document.querySelector("#main_id_card");
+    // Choose the element and save the PDF for our user.
+    html2pdf()
+      .set({ html2canvas: { scale: 4 } })
+      .from(idCard)
+      .save();
+  }
+  downloadButton.addEventListener("click",generatePDF)

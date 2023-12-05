@@ -12,7 +12,7 @@
     <div class="id_creator_container">
         <div class="container">
             <div class="id_creator_wrapper">
-                <h1 class="text-center">To Create Your <span>ID Card</span><br> Please Fill Up Following Form</h1>
+                <h1 class="text-center">Get your<span> online ID Card</span><br> Please fill up the following form</h1>
                 <div class="content_side">
                     <form action="" autocomplete="on" id="studentFrom">
                         <input type="text" placeholder="Your full name" id="fullName" required>
@@ -22,7 +22,7 @@
                         <input type="text" placeholder="Your blood group" id="bloodGroup" required>
                         <input type="text" placeholder="Your Address" id="address" required>
                         <input type="number" placeholder="Your phone number" id="phoneNumber" required>
-                        <input type="file" accept=".jpg, .jpeg, .png" placeholder="Your phone number"
+                        <input type="file" accept=".jpg, .jpeg, .png" placeholder=""
                             id="idProfileImage" required>
                             <div class="action_button">
                                 <button id="resetButton" type="reset">Reset</button>
@@ -31,7 +31,7 @@
                        
                     </form>
                     <div class="output_id">
-                        <div class="main_id_card">
+                        <div id="main_id_card">
                             <div class="idcard_header">
                                 <div class="id_company_logo">
                                     <img src="img/sma.png" alt="img/sma.png">
@@ -42,9 +42,15 @@
                                 </div>
                             </div>
                             <div class="id_card_body">
+                                <div class="left_side">
+            
+                                <div class="student_id_no">
+                                    <p>ID No: <span id="uniqId"></span></p>
+                                </div>
                                 <div class="id_profile_img">
                                     <img id="student_image" src="img/student.png" alt="img/student.jpg">
                                 </div>
+                            </div>
                                 <table class="id_profile_content">
                                     <tr>
                                         <td><b>Name</b></td>
@@ -78,6 +84,8 @@
                                 </table>
                             </div>
                         </div>
+
+                        <button id="downloadButton">Download PDF</button>
                     </div>
                 </div>
 
@@ -88,6 +96,8 @@
 
 
     <!--script file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="main.js"></script>
 </body>
 
