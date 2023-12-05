@@ -83,7 +83,7 @@
 .content_side form button{
     outline: none;
     border: 1px solid transparent;
-    padding: 15px 20px;
+    padding: 15px 0px;
     background-color: #079EE2;
     color: white;
     width: 70%;
@@ -93,6 +93,8 @@
     transition: .3s;
     margin-top: 20px;
     font-weight: 600;
+    width: 45%;
+    cursor: pointer;
 }
 .content_side form button:hover {
     background-color: white;
@@ -125,7 +127,7 @@
 }
 
 .id_card_body .id_profile_content tr td {
-    font-size: 1.4vw;
+    font-size: 13px;
     width: 120px;
     padding: 3px 0px;
 }
@@ -137,10 +139,10 @@
 .id_card_body .id_profile_content tr td span {
     font-weight: 400;
     color: black;
-    font-size: 12px;
+    font-size: 13px;
 }
 .company_title h3 {
-    font-size: 3vw;
+    font-size: 2.4vw;
     color: white;
 }
 .company_title{
@@ -153,7 +155,10 @@
 .output_id {
     padding: 0px 10px;
 }
-@media only screen and (max-width: 767px) {
+.action_button {
+    display: flex;
+}
+@media only screen and (max-width: 991px) {
     .id_creator_container .container {
         width: 100%;
         padding: 10px 10px;
@@ -173,5 +178,9 @@
     }
     .id_card_body .id_profile_content tr td span{
         font-size: 13px;
+    }
+    .action_button {
+        display: flex;
+        
     }
 }

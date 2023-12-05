@@ -24,7 +24,11 @@
                         <input type="number" placeholder="Your phone number" id="phoneNumber" required>
                         <input type="file" accept=".jpg, .jpeg, .png" placeholder="Your phone number"
                             id="idProfileImage" required>
-                        <button id="submit_button" type="submit">Get Your ID</button>
+                            <div class="action_button">
+                                <button id="resetButton" type="reset">Reset</button>
+                                <button id="submit_button" type="submit">Get Your ID</button> 
+                            </div>
+                       
                     </form>
                     <div class="output_id">
                         <div class="main_id_card">
@@ -39,37 +43,37 @@
                             </div>
                             <div class="id_card_body">
                                 <div class="id_profile_img">
-                                    <img id="student_image" src="img/child.jpg" alt="img/child.jpg">
+                                    <img id="student_image" src="img/student.png" alt="img/student.jpg">
                                 </div>
                                 <table class="id_profile_content">
                                     <tr>
                                         <td><b>Name</b></td>
-                                        <td>: <span id="id_name">Student name</span></td>
+                                        <td>: <span id="id_name"></span></td>
 
                                     </tr>
                                     <tr>
                                         <td><b>Father's Name</b></td>
-                                        <td>: <span id="id_father_name">Father's name</span></td>
+                                        <td>: <span id="id_father_name"></span></td>
                                     </tr>
                                     <tr>
                                         <td><b>Class</b></td>
-                                        <td>: <span id="id_class_name">Class No</span></td>
+                                        <td>: <span id="id_class_name"></span></td>
                                     </tr>
                                     <tr>
                                         <td><b>Birth Date</b></td>
-                                        <td>: <span id="id_birthdate">date</span></td>
+                                        <td>: <span id="id_birthdate"></span></td>
                                     </tr>
                                     <tr>
                                         <td><b>Blood Group</b></td>
-                                        <td>: <span id="id_bloodGroup">A(+)</span></td>
+                                        <td>: <span id="id_bloodGroup"></span></td>
                                     </tr>
                                     <tr>
                                         <td><b>Address</b></td>
-                                        <td>: <span id="id_address">village, post, distict, country</span></td>
+                                        <td>: <span id="id_address"></span></td>
                                     </tr>
                                     <tr>
                                         <td><b>Contact</b></td>
-                                        <td>: <span id="id_contact">+880199942487</span></td>
+                                        <td>: <span id="id_contact"></span></td>
                                     </tr>
                                 </table>
                             </div>

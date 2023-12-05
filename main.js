@@ -10,6 +10,7 @@ const addressInput = document.getElementById("address");
 const phoneNumberInput = document.getElementById("phoneNumber");
 const idImageInput = document.getElementById("idProfileImage");
 const studentFrom = document.getElementById("studentFrom");
+const resetButton = document.getElementById("resetButton");
 
 //output elements
 const nameOutput =document.getElementById("id_name");
@@ -21,17 +22,14 @@ const addressOutput = document.getElementById("id_address");
 const phoneNumberOutput = document.getElementById("id_contact");
 const studentIdImage = document.getElementById("student_image");
 let imgOutput;
+let imageURL;
 idImageInput.addEventListener("input", () => {
     console.log("File input changed");
     if (idImageInput.files.length) {
-        console.log("File selected:", idImageInput.files[0].name);
+       
         let selectedImage = idImageInput.files[0];
         // Create a temporary URL for the selected image
-        const imageURL = URL.createObjectURL(selectedImage);
-
-        // Set the temporary URL as the src attribute
-        studentIdImage.src = imageURL;
-
+        imageURL = URL.createObjectURL(selectedImage);
        
     } else {
         console.log("No file selected");
@@ -48,9 +46,23 @@ const formHandler = (event) => {
     addressOutput.textContent = addressInput.value;
     phoneNumberOutput.textContent = phoneNumberInput.value;
     // Save the image URL for later use
+    // Set the temporary URL as the src attribute
+    studentIdImage.src = imageURL;
     imgOutput = imageURL;
 
 
 }
-studentFrom.addEventListener("submit", formHandler)
+const clearData = () => {
+    studentIdImage.src = "img/student.png"
+    nameOutput.textContent = "";
+    fatherNameOutput.textContent = "";
+    classNameOutput.textContent = "";
+    birthDayOutput.textContent = "";
+    bloodGroupOutput.textContent = "";
+    addressOutput.textContent = "";
+    phoneNumberOutput.textContent = "";
+    
+}
+studentFrom.addEventListener("submit", formHandler);
+resetButton.addEventListener("click", clearData)
 
