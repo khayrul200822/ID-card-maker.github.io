@@ -84,12 +84,6 @@ resetButton.addEventListener("click", clearData)
 
 const downloadButton = document.getElementById('downloadButton');
 function generatePDF() {
-    // Choose the element that our invoice is rendered in.
-    const idCard = document.querySelector("#main_id_card");
-    // Choose the element and save the PDF for our user.
-    html2pdf()
-      .set({ html2canvas: { scale: 4 } })
-      .from(idCard)
-      .save();
+   print()
   }
   downloadButton.addEventListener("click",generatePDF)

@@ -181,6 +181,25 @@
 .company_title p {
     font-style: italic;
 }
+@media print{
+    form, .text-center{
+        visibility: hidden;
+    }
+    .output_id .idcard_header{
+        background-color: #079EE2;
+    }
+    .output_id{
+        height: 100%;
+        width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #main_id_card{
+        visibility: visible;
+        
+    }
+}
 @media only screen and (max-width: 991px) {
     .id_creator_container .container {
         width: 100%;
