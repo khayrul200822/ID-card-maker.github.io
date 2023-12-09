@@ -236,6 +236,7 @@
         width: 100%;
         padding: 10px 10px;
     }
+
     .content_side {
         display: grid;
         grid-template-columns: auto;
@@ -247,7 +248,7 @@
         font-size: 34px;
     }
     .company_title h3{
-        font-size: 25px;
+        font-size: 5vw;
     }
     .id_card_body .id_profile_content tr td{
         font-size: 14px;
@@ -259,4 +260,13 @@
         display: flex;
         
     }
+}
+@media only screen and (max-width: 500px) {
+  .output_id  {
+    overflow: scroll;
+    padding-bottom: 20px;
+  }
+  #main_id_card{
+    width: 445px;
+  }
 }
