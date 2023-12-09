@@ -181,6 +181,15 @@
 .company_title p {
     font-style: italic;
 }
+.output_id h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 35px;
+    margin-top: 50px;
+}
+.output_id h2 span {
+    color: #079EE2;
+}
 @media print{
     form, .text-center{
         visibility: hidden;
