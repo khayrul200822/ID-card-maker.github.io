@@ -82,8 +82,3 @@ studentFrom.addEventListener("submit", formHandler);
 resetButton.addEventListener("click", clearData)
 
 
-const downloadButton = document.getElementById('downloadButton');
-function generatePDF() {
-   print()
-  }
-  downloadButton.addEventListener("click",generatePDF)
